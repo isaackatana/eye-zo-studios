@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
+/* Optional: smooth background and text color transitions for dark/light mode */
+html {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* You can add your custom base styles here */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
