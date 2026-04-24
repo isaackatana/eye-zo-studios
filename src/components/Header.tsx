@@ -34,7 +34,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <button className="rounded-full border border-white/20 px-4 py-2 text-sm hover:border-brand-gold hover:text-brand-gold">
             Login
           </button>
@@ -44,7 +44,7 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="flex gap-4 overflow-x-auto px-4 pb-4 md:hidden">
+      <nav className="flex gap-2 overflow-x-auto px-4 pb-4 md:hidden">
         {navLinks.map((link) => (
           <Link
             key={link.name}
