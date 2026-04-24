@@ -16,7 +16,7 @@ export default function Music() {
         {songs.map((song) => (
           <article
             key={song.title}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+            className="rounded-3xl border border-white/10 bg-white/5 p-3 backdrop-blur"
           >
             <div className="mb-4 aspect-square rounded-2xl bg-gradient-to-br from-white/10 to-brand-gold/20" />
             <p className="text-sm uppercase tracking-widest text-brand-gold">{song.type}</p>
