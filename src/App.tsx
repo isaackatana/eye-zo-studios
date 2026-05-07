@@ -10,6 +10,7 @@ import About from "./pages/About";
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Favorites from "./pages/Favorites";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
 

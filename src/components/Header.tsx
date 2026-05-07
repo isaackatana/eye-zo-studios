@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Film & Documentaries", path: "/film" },
   { name: "Shop", path: "/shop" },
   { name: "About", path: "/about" },
+  { name: "Favorites", path: "/favorites" },
 ];
 
 export default function Header() {
