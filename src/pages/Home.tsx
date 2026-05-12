@@ -17,43 +17,28 @@ export default function Home() {
       <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-6 px-4 py-6 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-brand-gold">
-            Creative Studio • Music • Film • Culture
+            Global Distribution
           </p>
 
           <h1 className="mb-3 text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">
-            Stories in sound, vision, and style.
+            Reach every major streaming platform.
           </h1>
 
           <p className="mb-4 max-w-xl text-lg text-white/75">
-            Eye Zo is a modern creative platform for music, film,
-            documentaries, visual storytelling, and curated products.
+            Upload music, grow your audience, and distribute your sound worldwide with Eye Zo.
           </p>
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="/music"
-              className="rounded-full bg-brand-gold px-6 py-3 font-semibold text-black transition hover:scale-105"
-            >
-              Explore Music
-            </a>
-
-            <a
-              href="/film"
-              className="rounded-full border border-white/20 px-6 py-3 font-semibold text-brand-cream transition hover:bg-white/10"
-            >
-              Watch Films
-            </a>
-
-            <a
               href="/signup"
-              className="rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:scale-105 hover:bg-brand-gold"
+              className="rounded-full bg-brand-gold px-6 py-3 font-semibold text-black transition hover:scale-105"
             >
               Get Started
             </a>
           </div>
 
           {/* Crawling Platform Logos */}
-          <div className="relative mt-10 overflow-hidden rounded-2xl border border-white/10 bg-white/5 py-5 backdrop-blur">
+          <div className="relative mt-10 overflow-hidden rounded-2xl border border-white/10 bg-white/5 py-2 backdrop-blur">
             <div className="flex animate-[scroll_25s_linear_infinite] gap-4 whitespace-nowrap px-4">
               {[...platforms, ...platforms].map((platform, index) => (
                 <div

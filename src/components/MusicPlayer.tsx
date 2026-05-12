@@ -155,7 +155,7 @@ export default function MusicPlayer({
         {isOpen ? "Hide Player" : "Open Player"}
       </button>
 
-      <div className="mx-auto max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
         <div className="grid gap-5 lg:grid-cols-[1fr_1.4fr_1fr] lg:items-center">
           <div className="flex items-center gap-4">
             <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-gold/80 to-white/10 shadow-lg">
@@ -196,6 +196,15 @@ export default function MusicPlayer({
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
+
+                  <input
+                    type="range"
+                    min="0"
+                    max={progressMax}
+                    value={Math.min(currentTime, progressMax)}
+                    onChange={handleSeek}
+                    className="w-full cursor-pointer accent-brand-gold"
+                  />
 
                   <div className="mt-1 flex justify-between text-xs text-white/50">
                     <span>{formatTime(currentTime)}</span>
