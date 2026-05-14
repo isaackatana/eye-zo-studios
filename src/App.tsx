@@ -17,7 +17,7 @@ export default function App() {
     <div className="flex min-h-screen flex-col bg-brand-black text-brand-cream">
       <Header />
 
-      <main className="flex-1 pb-72">
+      <main className="flex-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/music" element={<Music />} />
