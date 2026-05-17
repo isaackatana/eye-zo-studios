@@ -12,6 +12,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Favorites from "./pages/Favorites";
 import Upload from "./pages/Upload";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Dashboard from "./pages/Dashboard";
+
 
 export default function App() {
   return (
@@ -28,7 +31,32 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route path="/upload" element={<Upload />} />
+          <Route
+            path="/upload"
+            element={
+              <ProtectedRoute>
+                <Upload />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/favorites"
+            element={
+              <ProtectedRoute>
+                <Favorites />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
 

@@ -2,19 +2,28 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useAuth } from "../context/AuthContext";
 
-const navLinks = [
+const publicLinks = [
   { name: "Home", path: "/" },
   { name: "Music", path: "/music" },
   { name: "Film & Documentaries", path: "/film" },
   { name: "Shop", path: "/shop" },
   { name: "About", path: "/about" },
+];
+
+const privateLinks = [
+  { name: "Dashboard", path: "/dashboard" },
   { name: "Favorites", path: "/favorites" },
   { name: "Upload", path: "/upload" },
-];
+];;
 
 export default function Header() {
   const location = useLocation();
+
   const { user, isLoggedIn, logout } = useAuth();
+
+  const navLinks = isLoggedIn
+    ? [...publicLinks, ...privateLinks]
+    : publicLinks;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">

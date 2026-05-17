@@ -16,7 +16,7 @@ export default function Login() {
 
     try {
       await login(email, password);
-      navigate("/music");
+      navigate("/");
     } catch {
       setError("Could not log in. Check your email and password.");
     }

@@ -16,7 +16,7 @@ export default function Signup() {
 
     try {
       await signup(email, password);
-      navigate("/music");
+      navigate("/");
     } catch {
       setError("Could not create account. Try another email or password.");
     }
